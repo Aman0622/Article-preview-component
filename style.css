@@ -1,0 +1,240 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  background-color: hsl(210, 46%, 95%);
+}
+
+#maindiv {
+  height: 300px;
+  width: 50%;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 12em;
+}
+
+#imgdiv {
+  height: 300px;
+  width: 100%;
+}
+
+#drawers {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#content {
+  padding: 2em;
+  background-color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#headimg {
+  font-size: 22px;
+  width: 100%;
+  line-height: 1.2em;
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+}
+
+#icon {
+  height: 40px;
+  width: 9%;
+  border: 2px solid red;
+  padding-left: 0.7em;
+  padding-top: 0.7em;
+  background-color: hsl(210, 46%, 95%);
+  border-radius: 60%;
+  border-style: none;
+  display: flex;
+  margin-left: 11em;
+}
+
+#share {
+  height: 15px;
+}
+
+#share:hover {
+  color: white;
+}
+
+#icon:hover {
+  background-color: hsl(217, 19%, 35%);
+  color: white;
+  transition: 1s;
+}
+
+#antardiv {
+  height: 50px;
+  width: 13%;
+}
+
+#profile {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+}
+
+#mich {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+h2 {
+  font-size: 15px;
+  margin-left: 1em;
+  color: hsl(217, 19%, 35%);
+}
+
+h2 + p {
+  font-size: 16px;
+  color: hsl(212, 23%, 69%);
+  margin-left: 1em;
+}
+
+@media screen and (max-width: 1370px) {
+  #maindiv {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 900px) {
+  #maindiv {
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 400px;
+    /* margin-bottom: 6rem; */
+  }
+  #drawers {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+  #content {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  #profile {
+    display: flex;
+  }
+  #mich {
+    height: 50px;
+    width: 70px;
+  }
+  #icon {
+    margin: 0 0 0 15rem;
+    padding: 10px 0 0 20px;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  body {
+    height: 80vh;
+  }
+  #maindiv {
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 400px;
+    /* margin-bottom: 6rem; */
+  }
+  #drawers {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+  }
+  #content {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  #profile {
+    display: flex;
+  }
+  #mich {
+    height: 50px;
+    width: 70px;
+  }
+  #icon {
+    margin: 0 0 0 2rem;
+    padding: 10px 0 0 0;
+  }
+}
